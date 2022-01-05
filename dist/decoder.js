@@ -1,4 +1,3 @@
-var message = "Hello World! How are you?";
 var letter_to_number = {};
 var number_to_letter = {};
 var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ._';
@@ -30,11 +29,6 @@ function encode(message, key) {
 function decode(message, key) {
     return encode(message, -key);
 }
-console.log(message);
-console.log(encode(message, 0));
-console.log(decode(encode(message, 0), 0));
-console.log(encode(message, 10));
-console.log(decode(encode(message, 10), 10));
 var grape = 'H'.charCodeAt(0) - 'A'.charCodeAt(0);
 var wine = 'B'.charCodeAt(0) - 'A'.charCodeAt(0);
 var chai = 'T'.charCodeAt(0) - 'A'.charCodeAt(0);
@@ -45,11 +39,4 @@ var wine_text = "🍷";
 var chia_text = "חַי ";
 var challah_text = "🥖";
 var bee_text = "🐝";
-console.log(alphabet);
-console.log(encode(alphabet, 0));
-console.log(encode(alphabet, grape));
-console.log(decode(encode(alphabet, grape), grape));
-console.log(encode("MIKE LETS EAT AT THE USUAL PLACE AND TIME", grape));
-console.log(decode(encode("MIKE LETS EAT AT THE USUAL PLACE AND TIME", grape), grape));
-console.log("חַי ");
 //# sourceMappingURL=decoder.js.map

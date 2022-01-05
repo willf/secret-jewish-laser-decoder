@@ -1,4 +1,3 @@
-let message: string = "Hello World! How are you?";
 
 let letter_to_number: { [key: string]: number; } = {}
 let number_to_letter: { [key: number]: string; } = {}
@@ -35,12 +34,6 @@ function encode(message: string, key: number): string {
 function decode(message: string, key: number): string {
   return encode(message, -key);
 }
-console.log(message);
-console.log(encode(message, 0));
-console.log(decode(encode(message, 0), 0));
-
-console.log(encode(message, 10));
-console.log(decode(encode(message, 10), 10));
 
 let grape   = 'H'.charCodeAt(0) - 'A'.charCodeAt(0);
 let wine    = 'B'.charCodeAt(0) - 'A'.charCodeAt(0);
@@ -55,12 +48,4 @@ let challah_text ="🥖"
 let bee_text = "🐝"
 
 
-console.log(alphabet);
 
-console.log(encode(alphabet, 0));
-console.log(encode(alphabet, grape));
-console.log(decode(encode(alphabet, grape), grape));
-
-console.log(encode("MIKE LETS EAT AT THE USUAL PLACE AND TIME", grape));
-console.log(decode(encode("MIKE LETS EAT AT THE USUAL PLACE AND TIME", grape), grape));
-console.log("חַי ")

@@ -1,4 +1,3 @@
-declare let message: string;
 declare let letter_to_number: {
     [key: string]: number;
 };
