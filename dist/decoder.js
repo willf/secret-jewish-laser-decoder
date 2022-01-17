@@ -10,24 +10,24 @@ function mod(n, p) {
         n = p - Math.abs(n) % p;
     return n % p;
 }
-function encode(message, key) {
+function decode(message, key) {
     message = message.toUpperCase();
-    var encoded = '';
+    var decoded = '';
     for (var i = 0; i < message.length; i++) {
         var currentLetter = message[i];
         var currentCode = letter_to_number[currentLetter];
         if (currentCode || currentCode === 0) {
             var newCode = mod(currentCode + key, alphabet.length);
-            encoded += number_to_letter[newCode];
+            decoded += number_to_letter[newCode];
         }
         else {
-            encoded += currentLetter;
+            decoded += currentLetter;
         }
     }
-    return encoded;
+    return decoded;
 }
-function decode(message, key) {
-    return encode(message, -key);
+function encode(message, key) {
+    return decode(message, -key);
 }
 var grape = 'H'.charCodeAt(0) - 'A'.charCodeAt(0);
 var wine = 'B'.charCodeAt(0) - 'A'.charCodeAt(0);

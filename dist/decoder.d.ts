@@ -6,8 +6,8 @@ declare let number_to_letter: {
 };
 declare let alphabet: string;
 declare function mod(n: number, p: number): number;
-declare function encode(message: string, key: number): string;
 declare function decode(message: string, key: number): string;
+declare function encode(message: string, key: number): string;
 declare let grape: number;
 declare let wine: number;
 declare let chai: number;

@@ -15,24 +15,24 @@ function mod(n: number, p: number): number {
     return n % p;
 }
 
-function encode(message: string, key: number): string {
+function decode(message: string, key: number): string {
   message = message.toUpperCase();
-  let encoded: string = '';
+  let decoded: string = '';
   for (let i = 0; i < message.length; i++) {
     let currentLetter: string = message[i];
     let currentCode: number = letter_to_number[currentLetter];
     if (currentCode || currentCode === 0) {
       let newCode = mod(currentCode + key, alphabet.length);
-      encoded += number_to_letter[newCode];
+      decoded += number_to_letter[newCode];
     } else {
-      encoded += currentLetter;
+      decoded += currentLetter;
     }
   }
-  return encoded;
+  return decoded;
 }
 
-function decode(message: string, key: number): string {
-  return encode(message, -key);
+function encode(message: string, key: number): string {
+  return decode(message, -key);
 }
 
 let grape   = 'H'.charCodeAt(0) - 'A'.charCodeAt(0);
