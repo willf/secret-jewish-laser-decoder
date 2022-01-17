@@ -23,16 +23,16 @@
         value = el.getAttribute("data-value");
         return parseInt(value);
       }
-      function encode_action(){
-        var input=document.getElementById("encode-input");
-        var output=document.getElementById("decode-input");
-        var message=encode(input.value, setting());
-        output.value=message;
-      }
       function decode_action(){
         var input=document.getElementById("decode-input");
         var output=document.getElementById("encode-input");
         var message=decode(input.value, setting());
+        output.value=message;
+      }
+      function encode_action(){
+        var input=document.getElementById("encode-input");
+        var output=document.getElementById("decode-input");
+        var message=encode(input.value, setting());
         output.value=message;
       }
       function show_tab(el) {
@@ -78,23 +78,23 @@
         <div class="col">
           
           <div class="row">
-            <textarea id="encode-input" class="col" rows="10">THE TRAIN LEAVES AT MIDNIGHT</textarea>
+            <textarea id="decode-input" class="col" rows="10">THE TRAIN LEAVES AT MIDNIGHT</textarea>
           </div>
-          <button id="encode-button" class="btn btn-primary" onclick="encode_action();">Encode</button>
+          <button id="decode-button" class="btn btn-primary" onclick="decode_action();">Encode</button>
         </div>
         <div class="col">
           
           <div class="row">
-            <textarea id="decode-input" class="col" rows="10"></textarea>
+            <textarea id="encode-input" class="col" rows="10"></textarea>
           </div>
-            <button id="decode-button" class="btn btn-primary" onclick="decode_action()">Decode</button>
+            <button id="encode-button" class="btn btn-primary" onclick="encode_action()">Decode</button>
     </div>
     <div class="row">
       <div class="col">
         <h2>Get your own!</h2>
         <ul>
-        <li>Get your own <a href="https://dissentpins.com/products/secret-jewish-space-laser-corps-decoder-wheel">Secret Jewish Space Laser Corps Decoder Wheel</a>.</li>
-        <li>Fork me on <a href="https://github.com/willf/secret-jewish-laser-decoder">GitHub</a>.</li>
+        <li>Get your own <a href="https://dissentpins.com/products/secret-jewish-space-laser-corps-encoder-wheel">Secret Jewish Space Laser Corps Decoder Wheel</a>.</li>
+        <li>Fork me on <a href="https://github.com/willf/secret-jewish-laser-encoder">GitHub</a>.</li>
       </div>
     </div>
     </div>
